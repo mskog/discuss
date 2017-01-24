@@ -1,12 +1,14 @@
 services:
   - postgresql
 addons:
-  postgresql: '9.6'
-
+  postgresql: '9.4'
 
 language: elixir
 elixir:
 - 1.3.4
+env:
+  - MIX_ENV=test
+
 notifications:
   slack:
     secure: dNOdfg1GqPBa1hcElN0ahlE0IP2CnbhEHxiPiEHKc9idvnuCRb504tbDhhVrMxKY4hLO0ui4zUBndM1gzrYvjjVXC+06piC+9Kn88XVrBUi4don3TSATRE9GDW2zVdSqWE73/aBUQU3oOOQ1oj9HYRjAMFdU2XavvmHY+hwIlcdyIkJyv5xJMgQrJP7ActogNY0KbMNVAgJqkAyt2O05d5KHVXbBKR2uHSKd/sOQyGGQwKgxGThHvDObdunQp7Gbpj/Ne1GKXCxmJ02rd7NbBcrsqaru/zLr15YtPc9OFtpugChz1oWvSvg+IAPAwVFHoFseRCJ8Jf+15R8qxpm//kLJo87uPm62rgUpd45sBT6cw/RH+gnYWo4PxMADPMCcPNpILMRCOFBLmlEccFF2YuDzL/fd6PqiFygYxJoNgdraegblhDR3kZ8QUXO3i2lIyjCs4lVLjUC1AjOZlJBHdhNKVpqG0qNXswJiDNIAu9NJr3Q678UfF4vaKL/d3mPVCY0L7M6h648M7UDwv1ZIOrrZC74lLc8TnlVvtKhmH+VsvvpQC45YaLHhw2kExgU46NoWg1WUY7jjC9roHL6fFJ9zxDcx7KPvJSw3R6rS9Oet/07TjG+akBcLYSmJBNyxIr/QU9EnftKZTZ4KnT82POSP3M6qYAs1LLSJYbAcXrI=
