@@ -68,6 +68,6 @@ config :discuss, Discuss.Repo,
   url: System.get_env("DATABASE_URL"),
   pool_size: 20
 
-config :ueberauth, Ueberauth.Strategy.Github.Oauth,
+config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: System.get_env("OAUTH_GITHUB_CLIENT_ID"),
   client_secret: System.get_env("OAUTH_GITHUB_CLIENT_SECRET")
