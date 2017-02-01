@@ -1,0 +1,8 @@
+{
+  "name": "discuss",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "mix ecto.migrate"
+    }
+  },
+}
