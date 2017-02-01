@@ -17,3 +17,5 @@ erl_crash.dump
 
 # Docker compose
 docker-compose.yml
+
+config/dev.secret.exs

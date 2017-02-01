@@ -58,4 +58,16 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+
+config :discuss, Discuss.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+# Configure your database
+config :discuss, Discuss.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: 20
+
+config :ueberauth, Ueberauth.Strategy.Github.Oauth,
+  client_id: System.get_env("OAUTH_GITHUB_CLIENT_ID"),
+  client_secret: System.get_env("OAUTH_GITHUB_CLIENT_SECRET"),
